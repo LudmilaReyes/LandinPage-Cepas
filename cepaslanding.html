@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Privado Cepas de Junín | Exclusividad y Naturaleza</title>
+    
+    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            beige: '#F4EFE6',
+                            lightbeige: '#FBF9F6',
+                            wine: '#75619A',     
+                            darkwine: '#3B3050'  
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F4EFE6; 
+            color: #3B3050; 
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        
+        /* Utility for the WA button hover pulse using lilac color */
+        @keyframes pulse-soft {
+            0% { box-shadow: 0 0 0 0 rgba(117, 97, 154, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(117, 97, 154, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(117, 97, 154, 0); }
+        }
+        .hover-pulse:hover {
+            animation: pulse-soft 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-wine selection:text-brand-lightbeige">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent text-white py-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            
+
+            <a href="#inicio" class="flex items-center gap-4 group">
+                <img src="imagenes/LOGO CEPAS DE JUNÍN PNG COLOR - copia.png" alt="Logo Cepas de Junín" class="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105 rounded-full" />
+            </a>
+            
+
+            <div class="hidden md:flex space-x-12 items-center">
+                <a href="#inicio" class="text-xs tracking-[0.2em] uppercase hover:text-brand-lightbeige transition-colors duration-300">Inicio</a>
+                <a href="#proyecto" class="text-xs tracking-[0.2em] uppercase hover:text-brand-lightbeige transition-colors duration-300">El Proyecto</a>
+                <a href="#masterplan" class="text-xs tracking-[0.2em] uppercase hover:text-brand-lightbeige transition-colors duration-300">Masterplan</a>
+                <a href="#ubicacion" class="text-xs tracking-[0.2em] uppercase hover:text-brand-lightbeige transition-colors duration-300">Ubicación</a>
+                <a href="#contacto" id="nav-btn" class="text-xs tracking-[0.2em] uppercase border border-current px-6 py-2 hover:bg-white hover:text-brand-darkwine transition-all duration-300">Contacto</a>
+            </div>
+
+
+            <button class="md:hidden focus:outline-none hover:opacity-70 transition-opacity">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 z-0 bg-brand-darkwine">
+            <img src="imagenes/IMG_6646.JPG" alt="Viñedos en Mendoza" class="w-full h-full object-cover transform scale-105 animate-[kenburns_20s_ease-out_forwards] mix-blend-overlay opacity-80">
+
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-darkwine/80 via-brand-wine/50 to-brand-darkwine/90"></div>
+        </div>
+        
+   
+        <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto flex flex-col items-center mt-16">
+            <div class="fade-in flex items-center justify-center space-x-4 mb-6">
+                <div class="w-8 h-[1px] bg-brand-lightbeige/60"></div>
+                <span class="uppercase tracking-[0.3em] text-xs md:text-sm font-light text-brand-lightbeige">Junín, Mendoza</span>
+                <div class="w-8 h-[1px] bg-brand-lightbeige/60"></div>
+            </div>
+            
+            <h1 class="fade-in delay-100 font-serif text-5xl md:text-7xl lg:text-[5.5rem] mb-6 font-medium leading-[1.1]">
+                Barrio Privado <br>
+                <span class="italic font-light">Cepas de Junín</span>
+            </h1>
+            
+            <p class="fade-in delay-200 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto opacity-90 leading-relaxed">
+                Descubra la esencia de la vida entre viñedos. <br class="hidden md:block">Un proyecto urbanístico donde la tradición se encuentra con la exclusividad.
+            </p>
+        </div>
+        
+   
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 fade-in delay-400">
+            <a href="#proyecto" class="flex flex-col items-center text-white/70 hover:text-white transition-colors duration-300">
+                <span class="text-[10px] uppercase tracking-[0.2em] mb-3">Descubrir</span>
+                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="proyecto" class="py-32 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+  
+            <div class="lg:col-span-5 fade-in sticky top-32">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-wine/70 mb-4 block">Entorno Único</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-darkwine mb-8 leading-tight">
+                    Tradición y Elegancia <br>
+                    <span class="italic font-light text-brand-wine">en el corazón del este</span>
+                </h2>
+                <div class="w-16 h-[1px] bg-brand-wine/30 mb-8"></div>
+                <p class="text-brand-darkwine/80 font-light leading-relaxed mb-6 text-lg">
+                    Cepas de Junín es un desarrollo inmobiliario concebido para quienes valoran la tranquilidad y el paisaje característico de nuestra provincia. Integrando viñedos y naturaleza en su diseño urbanístico.
+                </p>
+                <p class="text-brand-darkwine/80 font-light leading-relaxed text-lg">
+                    Un espacio planificado con excelencia, ideal para proyectar una vida familiar segura o realizar una inversión sólida en una zona de constante crecimiento.
+                </p>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-8 lg:mt-0">
+                
+                <div class="fade-in delay-100 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-wine/20 flex items-center justify-center mb-6 group-hover:bg-brand-wine group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Entorno Natural</h3>
+                    <p class="text-base font-light text-brand-darkwine/70 leading-relaxed">Paisajismo diseñado para respetar la flora autóctona y potenciar las vistas hacia la naturaleza circundante.</p>
+                </div>
+
+                <div class="fade-in delay-200 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-wine/20 flex items-center justify-center mb-6 group-hover:bg-brand-wine group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Lotes Exclusivos</h3>
+                    <p class="text-base font-light text-brand-darkwine/70 leading-relaxed">Superficies amplias y diagramación estratégica que garantizan la privacidad de cada una de las residencias.</p>
+                </div>
+
+                <div class="fade-in delay-300 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-wine/20 flex items-center justify-center mb-6 group-hover:bg-brand-wine group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Infraestructura</h3>
+                    <p class="text-base font-light text-brand-darkwine/70 leading-relaxed">Servicios de primera calidad, urbanización completa y trazado vial inteligente para una conectividad impecable.</p>
+                </div>
+
+                <div class="fade-in delay-400 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-wine/20 flex items-center justify-center mb-6 group-hover:bg-brand-wine group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Seguridad</h3>
+                    <p class="text-base font-light text-brand-darkwine/70 leading-relaxed">Control de acceso y perímetro protegido para garantizar un estilo de vida sereno y sin preocupaciones para su familia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="residencias" class="py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 fade-in">
+            <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-wine/70 mb-3 block">Opciones Habitacionales</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-brand-darkwine">Nuestras Residencias</h2>
+            <div class="w-16 h-[1px] bg-brand-wine mx-auto mt-8 opacity-50 mb-8"></div>
+            <p class="text-brand-darkwine/80 font-light max-w-2xl mx-auto">
+                Opciones habitacionales diseñadas con los más altos estándares de calidad, adaptándose a su estilo de vida.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div class="bg-brand-lightbeige group hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl fade-in overflow-hidden border border-brand-wine/10">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/Casa Cepas Frente.jpg" alt="Casa en Cepas de Junín" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-0 right-0 bg-brand-wine text-brand-lightbeige px-4 py-2 font-medium text-sm tracking-widest uppercase m-4">
+                        Casas de Autor
+                    </div>
+                </div>
+                <div class="p-10">
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Residencias Familiares</h3>
+                    <p class="text-brand-darkwine/80 font-light leading-relaxed mb-6">
+                        Casas amplias con diseños arquitectónicos exclusivos. Espacios luminosos con terminaciones premium, jardines privados y espacios pensados para disfrutar del clima mendocino. La combinación perfecta entre amplitud, privacidad y confort para toda la familia.
+                    </p>
+                    <ul class="text-sm text-brand-darkwine/70 space-y-2 font-medium">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Terrenos desde 300m²</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Terminaciones de primera calidad</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Diseño moderno y eficiente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-brand-lightbeige group hover:-translate-y-2 transition-transform duration-500 shadow-sm hover:shadow-xl fade-in overflow-hidden border border-brand-wine/10">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="imagenes/Frente Duplex Cepas.jpg" alt="Dúplex en Cepas de Junín" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-0 right-0 bg-brand-wine text-brand-lightbeige px-4 py-2 font-medium text-sm tracking-widest uppercase m-4">
+                        Dúplex Modernos
+                    </div>
+                </div>
+                <div class="p-10">
+                    <h3 class="font-serif text-2xl text-brand-darkwine mb-3">Diseño Funcional</h3>
+                    <p class="text-brand-darkwine/80 font-light leading-relaxed mb-6">
+                        Unidades de vanguardia que optimizan cada metro cuadrado. Ideales para jóvenes profesionales, parejas o como oportunidad de inversión. Ofrecen ambientes integrados, cochera propia y un diseño contemporáneo que facilita una vida dinámica sin perder exclusividad.
+                    </p>
+                    <ul class="text-sm text-brand-darkwine/70 space-y-2 font-medium">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Unidades de 2 y 3 dormitorios</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Espacios integrados y luminosos</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-brand-wine mr-3"></span>Excelente rentabilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="masterplan" class="py-32 bg-brand-lightbeige border-y border-brand-wine/10">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            <div class="text-center fade-in mb-16">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-wine/70 mb-3 block">Organización Espacial</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-darkwine">Masterplan</h2>
+                <div class="w-16 h-[1px] bg-brand-wine mx-auto mt-8 opacity-50"></div>
+                <p class="mt-8 text-brand-darkwine/70 font-light max-w-2xl mx-auto">Explore la distribución de nuestro barrio, diseñado para fusionar la elegancia residencial con los espacios naturales abiertos.</p>
+            </div>
+            
+            <div class="fade-in delay-200 relative group max-w-6xl mx-auto">
+                <div class="absolute -inset-2 bg-gradient-to-r from-brand-wine/20 to-brand-darkwine/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+
+                <img src="imagenes/Plano 3D Cepas.jpg" alt="Masterplan Barrio Privado Cepas de Junín" 
+                     class="relative w-full rounded-xl shadow-2xl object-cover border border-white/40">
+            </div>
+        </div>
+    </section>
+<section id="ubicacion" class="py-32 bg-brand-beige">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center fade-in mb-16">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-wine/70 mb-3 block">Ubicación Estratégica</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-darkwine">Cómo Llegar</h2>
+                <div class="w-16 h-[1px] bg-brand-wine mx-auto mt-8 opacity-50 mb-8"></div>
+                <p class="text-brand-darkwine/80 font-light max-w-2xl mx-auto">
+                    Situado en una zona privilegiada de Junín, con rápidos y seguros accesos, rodeado de la tranquilidad que caracteriza a nuestra tierra.
+                </p>
+            </div>
+
+            <div class="fade-in delay-200 w-full overflow-hidden rounded-xl shadow-xl border border-brand-wine/20">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.6897465326742!2d-68.43178032470126!3d-33.13943758165132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e5b8a77818a01%3A0xd6d8568241abcedf!2sCepas%20de%20Junin!5e1!3m2!1ses-419!2sar!4v1791213657204!5m2!1ses-419!2sar" 
+                    class="w-full h-[400px] md:h-[600px]" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="py-32 bg-brand-beige">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="text-center fade-in mb-12">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-wine/70 mb-3 block">Atención Personalizada</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-darkwine mb-6">Inicie su Proyecto</h2>
+                <p class="text-brand-darkwine/70 font-light text-lg max-w-xl mx-auto">
+                    Nuestros asesores están listos para brindarle toda la información sobre disponibilidad y valores. Contáctenos de forma directa y exclusiva a través de WhatsApp.
+                </p>
+            </div>
+
+            <div class="flex justify-center fade-in delay-200">
+
+                <a href="https://wa.me/5492613896838?text=Hola,%20quisiera%20más%20información%20sobre%20el%20Barrio%20Privado%20Cepas%20de%20Junín." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="hover-pulse flex items-center justify-center space-x-4 bg-brand-wine text-brand-beige px-10 py-5 rounded-sm shadow-xl hover:bg-brand-darkwine transition-all duration-300">
+                    
+                    <!-- WhatsApp Icon SVG -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span class="text-sm tracking-widest uppercase font-medium">Contactar por WhatsApp</span>
+                </a>
+            </div>
+            
+            <p class="text-center text-brand-darkwine/50 text-sm mt-8 fade-in delay-300">
+                Respuesta inmediata por parte de nuestro equipo de ventas.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-brand-darkwine text-brand-beige py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center text-xs font-light tracking-wide opacity-70">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <span class="font-serif text-xl font-medium block md:inline mb-2 md:mb-0 mr-4 opacity-100">Cepas de Junín</span>
+                Un desarrollo inmobiliario en Junín, Mendoza.
+            </div>
+            <div class="flex space-x-6">
+ 
+                <span>&copy; 2026 Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect Logic
+            const navbar = document.getElementById('navbar');
+            const navBtn = document.getElementById('nav-btn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    // Scrolled state (Light background for Beige/Lilac theme)
+                    navbar.classList.remove('bg-transparent', 'text-white', 'py-6');
+                    navbar.classList.add('bg-brand-lightbeige', 'text-brand-darkwine', 'shadow-sm', 'py-4', 'border-b', 'border-brand-wine/10');
+                    
+                    // Ajuste de opacidad en logo y links para contrastar
+                    navbar.querySelectorAll('a, span, svg').forEach(el => {
+                        if(el.id !== 'nav-btn') {
+                            el.classList.remove('text-white');
+                            el.classList.add('text-brand-darkwine');
+                        }
+                    });
+
+                    // Button adjustment for light mode
+                    navBtn.classList.remove('hover:bg-white', 'hover:text-brand-darkwine');
+                    navBtn.classList.add('border-brand-darkwine', 'hover:bg-brand-darkwine', 'hover:text-brand-beige');
+                } else {
+                    // Top state (Transparent/Dark overlay mode)
+                    navbar.classList.add('bg-transparent', 'text-white', 'py-6');
+                    navbar.classList.remove('bg-brand-lightbeige', 'text-brand-darkwine', 'shadow-sm', 'py-4', 'border-b', 'border-brand-wine/10');
+                    
+                    // Restablecer estilos
+                    navbar.querySelectorAll('a, span, svg').forEach(el => {
+                         if(el.id !== 'nav-btn') {
+                            el.classList.add('text-white');
+                            el.classList.remove('text-brand-darkwine');
+                        }
+                    });
+
+                    // Button adjustment for dark mode
+                    navBtn.classList.add('hover:bg-white', 'hover:text-brand-darkwine');
+                    navBtn.classList.remove('border-brand-darkwine', 'hover:bg-brand-darkwine', 'hover:text-brand-beige');
+                }
+            });
+
+            // Intersection Observer for Elements Fade-in Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            // Select all elements with the 'fade-in' class and observe them
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
