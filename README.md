@@ -2,8 +2,9 @@
 
 Landing page de un solo archivo para el **Barrio Privado Cepas de Junín** (Junín, Mendoza), un desarrollo inmobiliario con casas, dúplex y lotes. Está pensada para presentar el proyecto con un estilo elegante y llevar al visitante a una **consulta directa por WhatsApp**.
 
-🔗 **Sitio en vivo:** [COMPLETAR: URL]
+🔗 **Sitio en vivo:** (https://mutualmebna0.github.io/landingCepas/)
 
+<img width="1351" height="659" alt="image" src="https://github.com/user-attachments/assets/da5b9a10-3b83-49ee-bf93-5cff37fd1249" />
 
 
 ## 🎯 Objetivo
